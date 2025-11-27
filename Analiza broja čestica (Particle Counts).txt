@@ -1,0 +1,89 @@
+To je odlično pitanje. Analiza broja čestica (Particle Counts) vam daje "otisak prsta" zagađenja. Dok vam masa (PM2.5 u µg/m³) govori koliko je zagađeno, broj čestica vam govori šta je verovatni uzrok.
+
+Evo detaljnog objašnjenja za svaki od 6 novih Asset-a koje ste kreirali, šta te veličine predstavljaju i odakle dolaze:
+
+1. count-0-3 (Čestice > 0.3 µm) - Najsitnije i najopasnije
+Ovo je "osnovni šum" zagađenja. Ovaj broj će uvek biti najveći jer uključuje apsolutno sve čestice koje senzor može da vidi.
+
+Izvori:
+
+Izduvni gasovi: Dizel motori, automobili.
+
+Dim: Sagorevanje drveta, uglja, cigareta.
+
+Bio-aerosoli: Virusi (često vezani za kapljice), neke bakterije.
+
+Smog: Fotohemijski smog koji nastaje reakcijom sunca i izduvnih gasova.
+
+Značaj: Ove čestice su toliko male da se ponašaju kao gas. Prolaze kroz pluća direktno u krvotok. Ako je ovaj broj ogroman, a krupne čestice niske -> Neko loži ili je gust saobraćaj.
+
+2. count-0-5 (Čestice > 0.5 µm) - Granica vidljivosti
+Slično kao 0.3, ali filtrira one najsitnije nano-čestice.
+
+Izvori:
+
+Bakterije: Većina bakterija je u ovom opsegu.
+
+Fina prašina: Nastala taloženjem smoga.
+
+Kuvanje: Isparenja od ulja i prženja hrane (u zatvorenom prostoru).
+
+3. count-1-0 (Čestice > 1.0 µm) - PM1 Granica
+Ovo je granica onoga što zovemo "PM1".
+
+Izvori:
+
+Dim od cigareta: Dim cigarete je dominantno u opsegu 0.1 - 1.0 µm.
+
+Fina čađ: Ostaci sagorevanja.
+
+Vlažna izmaglica: Sitne kapljice vode (magla) počinju da se broje ovde ako je vlažnost visoka.
+
+4. count-2-5 (Čestice > 2.5 µm) - "Fina prašina"
+Ovo je granica za PM2.5. Sve što je veće od ovoga spada u "grubu" frakciju (Coarse particles).
+
+Izvori:
+
+Spore buđi: Većina spora buđi je veličine 2-10 µm.
+
+Građevinska prašina (fina): Gips, cementna prašina koja dugo lebdi.
+
+Ostaci insekata: Mikroskopski delovi.
+
+Dijagnostika: Ako imate visok count-2-5 a nizak count-0-3, zagađenje verovatno nije od loženja/vatre, već je mehaničko (prašina, vetar).
+
+5. count-5-0 (Čestice > 5.0 µm) - Krupna prašina
+Ovde ulazimo u svet čestica koje ponekad možete videti golim okom na jakom svetlu (kao "zrnca" koja lebde na suncu).
+
+Izvori:
+
+Polen: Većina polena drveća i trave je u opsegu 10-50 µm, ali fragmenti polena su oko 5 µm.
+
+Kućna prašina: Tekstilna vlakna, perut kućnih ljubimaca.
+
+Grinje: Izmet grinja i njihovi ostaci.
+
+Erozija tla: Prašina koju vetar diže sa njive ili puta.
+
+6. count-10-0 (Čestice > 10 µm) - Teška prljavština
+Ovo su "stene" u svetu aerosola. One brzo padaju na zemlju i ne zadržavaju se dugo u vazduhu osim ako ih vetar ili ventilator ne podigne.
+
+Izvori:
+
+Vidljiva prašina: Pesak, zemlja.
+
+Krupan polen: Polen ambrozije i cveća.
+
+Pepeo: Krupni komadi pepela iz dimnjaka (koji padaju u dvorište).
+
+Radovi: Brušenje, sečenje drveta, građevinski radovi u neposrednoj blizini.
+
+🛠️ Kako tumačiti podatke (Praktični primeri)
+Kada gledate grafikone na AllThingsTalk-u, tražite ove odnose:
+
+Scenarijo	Šta pokazuju podaci?	Tumačenje
+Zima / Veče	count-0-3 ogroman ("eksplodira"), krupne čestice mirne.	Komšija je naložio vatru. Dim je dominantan zagađivač.
+Proleće / Vetar	count-5-0 i count-10-0 visoki, a count-0-3 relativno nizak.	Polen ili Prašina. Vetar diže prašinu sa tla ili cveće cveta. Nije dim.
+Unutra / Kuhinja	count-0-5 skače naglo dok spremate ručak.	Prženje hrane. Ulja oslobađaju ogromnu količinu sitnih aerosola.
+Unutra / Čišćenje	count-5-0 i count-10-0 skaču.	Usisavanje/Brisanje. Podigli ste prašinu i grinje sa tepiha.
+Ovi podaci vam omogućavaju da budete "detektiv" za vazduh!
